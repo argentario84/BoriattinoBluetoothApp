@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/deviceScanFragment">
+
+    <fragment
+        android:id="@+id/deviceScanFragment"
+        android:name="com.cowabonga.boriattinobluetoothapp.DeviceScanFragment"
+        android:label="Scan Devices">
+        <action
+            android:id="@+id/action_scan_to_control"
+            app:destination="@id/deviceControlFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceControlFragment"
+        android:name="com.cowabonga.boriattinobluetoothapp.DeviceControlFragment"
+        android:label="Control Device" />
+
+    <fragment
+        android:id="@+id/liveDataFragment"
+        android:name="com.cowabonga.boriattinobluetoothapp.LiveDataFragment"
+        android:label="Live Data" />
+
+    <fragment
+        android:id="@+id/dataRecordingFragment"
+        android:name="com.cowabonga.boriattinobluetoothapp.DataRecordingFragment"
+        android:label="Recording" />
+</navigation>

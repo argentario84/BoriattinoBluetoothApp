@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_gps"
+        android:icon="@drawable/ic_chart"
+        android:title="GPS" />
+    <item
+        android:id="@+id/navigation_live"
+        android:icon="@drawable/ic_chart"
+        android:title="Live" />
+    <item
+        android:id="@+id/navigation_race"
+        android:icon="@drawable/ic_chart"
+        android:title="Race" />
+</menu>

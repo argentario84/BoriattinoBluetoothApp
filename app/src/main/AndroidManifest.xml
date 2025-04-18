@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cowabonga.boriattinobluetoothapp">
+
+    <!-- ✅ Permessi per il Bluetooth (Android 12+) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+
+    <!-- ✅ Permessi per il GPS (necessario per BLE su Android 10+) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- ✅ Permesso per salvare i dati su memoria interna -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/Theme.BoriattinoBluetoothApp"
+        android:label="Boriattino Bluetooth App"
+        android:usesCleartextTraffic="true">
+
+        <!-- ✅ Activity principale -->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.BoriattinoBluetoothApp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ Activity per la scansione dei dispositivi Bluetooth -->
+        <activity
+            android:name=".DeviceScanActivity"
+            android:exported="true"/>
+
+        <!-- ✅ Activity per il controllo del dispositivo BLE -->
+        <activity
+            android:name=".DeviceControlActivity"
+            android:exported="true"/>
+
+        <!-- ✅ Activity per la registrazione e visualizzazione dei dati -->
+        <activity
+            android:name=".DataRecordingActivity"
+            android:exported="true"/>
+
+        <!-- ✅ Activity per la visualizzazione della mappa e dati in tempo reale -->
+        <activity
+            android:name=".LiveDataActivity"
+            android:exported="true"/>
+    </application>
+
+</manifest>

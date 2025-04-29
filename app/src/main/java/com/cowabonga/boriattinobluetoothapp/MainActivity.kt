@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import com.cowabonga.boriattinobluetoothapp.fragments.GpsModeFragment
 import com.cowabonga.boriattinobluetoothapp.fragments.LiveModeFragment
 import com.cowabonga.boriattinobluetoothapp.fragments.RaceModeFragment
+import com.cowabonga.boriattinobluetoothapp.fragments.RouteModeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
                 selected = LiveModeFragment()
             } else if (item.itemId == R.id.navigation_race) {
                 selected = RaceModeFragment()
+            }
+            else if (item.itemId == R.id.navigation_route) {
+                selected = RouteModeFragment()
             }
             if (selected != null) {
                 supportFragmentManager.beginTransaction()

@@ -26,4 +26,9 @@
         android:id="@+id/dataRecordingFragment"
         android:name="com.cowabonga.boriattinobluetoothapp.DataRecordingFragment"
         android:label="Recording" />
+
+    <fragment
+        android:id="@+id/routeModeFragment"
+        android:name="com.cowabonga.boriattinobluetoothapp.fragments.RouteModeFragment"
+        android:label="Recording" />
 </navigation>
